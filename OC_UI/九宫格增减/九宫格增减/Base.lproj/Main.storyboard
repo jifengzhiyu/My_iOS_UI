@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPf-Vy-w8x">
+                                <rect key="frame" x="60" y="777" width="76" height="52"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="0GE-Ue-jk5"/>
+                                    <constraint firstAttribute="height" constant="52" id="RND-0H-Ct2"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="plus" catalog="system"/>
+                                <connections>
+                                    <action selector="add:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OhD-QI-lM6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2KB-33-6bz">
+                                <rect key="frame" x="270" y="777" width="76" height="52"/>
+                                <color key="backgroundColor" systemColor="placeholderTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="INb-bm-lnE"/>
+                                    <constraint firstAttribute="width" constant="76" id="hXP-CV-7O6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="delete.left" catalog="system"/>
+                                <connections>
+                                    <action selector="remove:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Crc-v3-7sz"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pI1-NL-oE7">
+                                <rect key="frame" x="30" y="53" width="354" height="679"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pI1-NL-oE7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="9" id="2PS-g4-FRk"/>
+                            <constraint firstItem="2KB-33-6bz" firstAttribute="top" secondItem="pI1-NL-oE7" secondAttribute="bottom" constant="45" id="ElF-th-6gi"/>
+                            <constraint firstItem="2KB-33-6bz" firstAttribute="leading" secondItem="EPf-Vy-w8x" secondAttribute="trailing" constant="134" id="LVr-ew-xdH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pI1-NL-oE7" secondAttribute="trailing" constant="30" id="N4Z-xu-PnT"/>
+                            <constraint firstItem="pI1-NL-oE7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="NcP-2p-pHI"/>
+                            <constraint firstItem="EPf-Vy-w8x" firstAttribute="top" secondItem="pI1-NL-oE7" secondAttribute="bottom" constant="45" id="Yzj-pf-oii"/>
+                            <constraint firstItem="EPf-Vy-w8x" firstAttribute="top" secondItem="pI1-NL-oE7" secondAttribute="bottom" constant="45" id="g5l-Wz-Yeu"/>
+                            <constraint firstItem="EPf-Vy-w8x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="gZE-7Q-huW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="pI1-NL-oE7" secondAttribute="bottom" constant="130" id="mUT-VA-7lM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="EPf-Vy-w8x" id="IVy-yS-ytf"/>
+                        <outlet property="removeButton" destination="2KB-33-6bz" id="sWO-O2-XpR"/>
+                        <outlet property="shopCarView" destination="pI1-NL-oE7" id="PMJ-bx-xmT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="delete.left" catalog="system" width="128" height="104"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="placeholderTextColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
